@@ -2,41 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Crunchyroll-inspired streaming service design system */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Streaming service dark theme */
+    --background: 220 13% 6%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 13% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 13% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Crunchyroll orange brand colors */
+    --primary: 22 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 22 100% 60%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 13% 14%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 13% 14%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 22 100% 50%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 18%;
+    --input: 220 13% 14%;
+    --ring: 22 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Streaming service specific tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(220 13% 8%), hsl(220 13% 4%));
+    --card-gradient: linear-gradient(145deg, hsl(220 13% 11%), hsl(220 13% 9%));
+    --primary-gradient: linear-gradient(135deg, hsl(22 100% 50%), hsl(28 100% 55%));
+    --glow-gradient: linear-gradient(135deg, hsl(22 100% 50% / 0.3), hsl(28 100% 55% / 0.3));
+    
+    /* Premium shadows and effects */
+    --shadow-glow: 0 0 40px hsl(22 100% 50% / 0.3);
+    --shadow-card: 0 8px 32px hsl(220 13% 4% / 0.4);
+    --shadow-premium: 0 20px 60px hsl(22 100% 50% / 0.2);
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
