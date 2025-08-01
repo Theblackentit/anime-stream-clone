@@ -1,6 +1,7 @@
 import { Play, Plus, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 interface AnimeCardProps {
   title: string;
@@ -13,8 +14,15 @@ interface AnimeCardProps {
 }
 
 const AnimeCard = ({ title, image, rating, episodes, genre, year, description }: AnimeCardProps) => {
+  const navigate = useNavigate();
+  
+  const handleClick = () => {
+    const id = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    navigate(`/show/${id}`);
+  };
+
   return (
-    <Card className="group relative overflow-hidden bg-card-gradient border-border hover:shadow-card transition-all duration-300 transform hover:scale-105">
+    <Card className="group relative overflow-hidden bg-card-gradient border-border hover:shadow-card transition-all duration-300 transform hover:scale-105 cursor-pointer" onClick={handleClick}>
       <div className="aspect-[3/4] relative overflow-hidden">
         <img
           src={image}
